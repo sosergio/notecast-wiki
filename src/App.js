@@ -6,12 +6,12 @@ import {
 } from "react-router-dom";
 import HomeScreen from './screens/HomeScreen'
 import PersonasScreen from './screens/PersonasScreen';
-import CritiqueScreen from './screens/CritiqueScreen'
+import CompetitorsScreen from './screens/CompetitorsScreen'
 import SketchesScreen from './screens/SketchesScreen';
 import TechnologiesScreen from './screens/TechnologiesScreen'
 
-
 import AppMenu from './components/AppMenu' ;
+import FooterNavigation from './components/FooterNavigation' ;
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
@@ -68,6 +68,14 @@ function App(props) {
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
+  const menuItems = [
+    {text: 'Home', path: '/', icon: 'home'},
+    {text: 'Personas', path: '/personas', icon: 'portrait'},
+    {text: 'Sketches', path: '/sketches', icon: 'photo'},
+    {text: 'Competitors', path: '/competitors', icon: 'format_quote'},
+    {text: 'Technologies', path: '/technologies', icon: 'memory'}
+  ];
+
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -103,7 +111,10 @@ function App(props) {
                 keepMounted: true
               }}
             >
-              <AppMenu classes={classes} onSelect={e => setMobileOpen(false)}></AppMenu>
+              <AppMenu 
+                menuItems={menuItems}
+                classes={classes} 
+                onSelect={e => setMobileOpen(false)}></AppMenu>
             </Drawer>
           </Hidden>
           <Hidden xsDown implementation="css">
@@ -133,13 +144,14 @@ function App(props) {
             <Route path="/sketches">
               <SketchesScreen />
             </Route>
-            <Route path="/critique">
-              <CritiqueScreen />
+            <Route path="/competitors">
+              <CompetitorsScreen />
             </Route>
             <Route path="/technologies">
               <TechnologiesScreen />
             </Route>
           </Switch>
+          <FooterNavigation menuItems={menuItems}></FooterNavigation>
         </main>
       </Router>
     </div>

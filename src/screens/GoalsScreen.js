@@ -15,14 +15,14 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function TechnologiesScreen() {
+function GoalsScreen() {
   const classes = useStyles();
   return (
     <div>
       <Grid container spacing={5}>
         <Grid item xs={12} md={8}>
           <Typography variant="h6" gutterBottom>
-            Technologies
+            App Goals 
           </Typography>
           <Divider />
           <Typography className={classes.mainContentParagraph}>
@@ -36,7 +36,7 @@ function TechnologiesScreen() {
               About
             </Typography>
             <Typography>
-              A list of the technologies/frameworks to be used creating the app and how confident you are with each right now.
+              This will describe compactly, what the app is for
             </Typography>
           </Paper>
         </Grid>
@@ -45,4 +45,4 @@ function TechnologiesScreen() {
   );
 }
 
-export default TechnologiesScreen;
+export default GoalsScreen;

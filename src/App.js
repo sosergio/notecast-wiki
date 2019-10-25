@@ -4,12 +4,11 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import HomeScreen from './screens/HomeScreen'
+import GoalsScreen from './screens/GoalsScreen'
 import PersonasScreen from './screens/PersonasScreen';
 import CompetitorsScreen from './screens/CompetitorsScreen'
-import SketchesScreen from './screens/SketchesScreen';
+import WireframesScreen from './screens/WireframesScreen';
 import TechnologiesScreen from './screens/TechnologiesScreen'
-
 import AppMenu from './components/AppMenu' ;
 import FooterNavigation from './components/FooterNavigation' ;
 import AppBar from '@material-ui/core/AppBar';
@@ -17,7 +16,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
-
 import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -68,14 +66,6 @@ function App(props) {
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
-  const menuItems = [
-    {text: 'Home', path: '/', icon: 'home'},
-    {text: 'Personas', path: '/personas', icon: 'portrait'},
-    {text: 'Sketches', path: '/sketches', icon: 'photo'},
-    {text: 'Competitors', path: '/competitors', icon: 'format_quote'},
-    {text: 'Technologies', path: '/technologies', icon: 'memory'}
-  ];
-
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -112,7 +102,6 @@ function App(props) {
               }}
             >
               <AppMenu 
-                menuItems={menuItems}
                 classes={classes} 
                 onSelect={e => setMobileOpen(false)}></AppMenu>
             </Drawer>
@@ -123,8 +112,7 @@ function App(props) {
                 paper: classes.drawerPaper,
               }}
               variant="permanent"
-              open
-            >
+              open>
               <AppMenu classes={classes}></AppMenu>
             </Drawer>
           </Hidden>
@@ -133,16 +121,13 @@ function App(props) {
           <div className={classes.toolbar} />
           <Switch>
             <Route exact path="/">
-              <HomeScreen />
+              <GoalsScreen />
             </Route>
             <Route path="/personas">
               <PersonasScreen />
             </Route>
-            <Route path="/dashboard">
-              <HomeScreen />
-            </Route>
-            <Route path="/sketches">
-              <SketchesScreen />
+            <Route path="/wireframes">
+              <WireframesScreen />
             </Route>
             <Route path="/competitors">
               <CompetitorsScreen />
@@ -151,7 +136,7 @@ function App(props) {
               <TechnologiesScreen />
             </Route>
           </Switch>
-          <FooterNavigation menuItems={menuItems}></FooterNavigation>
+          <FooterNavigation />
         </main>
       </Router>
     </div>

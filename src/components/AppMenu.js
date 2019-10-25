@@ -5,6 +5,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import Icon from '@material-ui/core/Icon';
+import MenuItems from './MenuItems';
 import {
   useHistory,
   useLocation
@@ -12,13 +13,6 @@ import {
 
 function AppMenu(props) {
   const { classes, onSelect } = props;
-  const menuItems = [
-    {text: 'Home', path: '/', icon: 'home'},
-    {text: 'Personas', path: '/personas', icon: 'portrait'},
-    {text: 'Sketches', path: '/sketches', icon: 'photo'},
-    {text: 'Competitors', path: '/competitors', icon: 'format_quote'},
-    {text: 'Technologies', path: '/technologies', icon: 'memory'}
-  ];
   let history = useHistory();
   let location = useLocation();
   
@@ -35,7 +29,7 @@ function AppMenu(props) {
       <Divider />
 
       <List>
-        {menuItems && menuItems.map((item, index) => (
+        {MenuItems.map((item, index) => (
           <ListItem 
             button 
             key={item.text} 

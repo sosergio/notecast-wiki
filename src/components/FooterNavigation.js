@@ -5,7 +5,7 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom'
-import MenuItems from './MenuItems';
+import menuItems from './menuItems';
 import {
   useLocation
 } from "react-router-dom";
@@ -29,7 +29,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function FooterNavigation(props) {
-  const menuItems = MenuItems;
   const classes = useStyles();
   let location = useLocation();
   const indexOfCurrent = menuItems.findIndex(x => x.path === location.pathname);

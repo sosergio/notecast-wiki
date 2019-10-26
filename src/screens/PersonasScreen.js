@@ -42,17 +42,13 @@ const useStyles = makeStyles(theme => ({
   },
   noSpacing:{
     padding:0,
-    margin:0
+    margin:'0 0 5px 0'
   }
 }));
 
 function PersonasScreen() {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+  
   return (
     <div>
     <Grid container spacing={5}>
@@ -100,13 +96,11 @@ function PersonasScreen() {
             <Typography className={classes.heading}>Needs</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails className={classes.noSpacing}>
-            <Typography>
               <ul className={classes.list}>
                 <li>Make the best use of his commute time</li>
                 <li>Quickly jump to new interesting shows/episodes</li>
                 <li>Highlight interesting parts to research further or share</li>
               </ul>
-            </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
 
@@ -118,7 +112,6 @@ function PersonasScreen() {
             <Typography className={classes.heading}>Serve By</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails className={classes.noSpacing}>
-            <Typography>
               <ul className={classes.list}>
                 <li>An app that works offline</li>
                 <li>Filter shows by topic</li>
@@ -127,7 +120,6 @@ function PersonasScreen() {
                 <li>Attach notes to a part of an episode</li>
                 <li>Review and manage his notes</li>
               </ul>
-            </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
         {/* FIRST PERSONA END */}
@@ -168,14 +160,12 @@ function PersonasScreen() {
             <Typography className={classes.heading}>Needs</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails className={classes.noSpacing}>
-            <Typography>
               <ul className={classes.list}>
               <li>To keep herself motivated while in her parental leave</li>
               <li>To learn how to use podcasts</li>
               <li>To plan her activities beforehand</li> 
               <li>Support from like-minded people</li>
               </ul>
-            </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
 
@@ -187,13 +177,11 @@ function PersonasScreen() {
             <Typography className={classes.heading}>Serve By</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails className={classes.noSpacing}>
-            <Typography>
               <ul className={classes.list}>
               <li>The support of a community with common problems/goals</li>
               <li>A shows/episodes diary</li>
               <li>Goal and progress tracker</li>
               </ul>
-            </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
         {/* SECOND PERSONA END */}

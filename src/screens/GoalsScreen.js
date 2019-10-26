@@ -39,7 +39,7 @@ function GoalsScreen() {
 
           <Typography variant="h6" gutterBottom>Review and share</Typography>
           <Typography paragraph>
-            With Notecast you can add your own personal notes to the episode you are
+            With Notecast you can rate and add your own personal notes to the episode you are
             listening to. In this way you can make sense of hours of episodes 
             into a structured library of notes, that can be easily reviewed and 
             shared with other users.

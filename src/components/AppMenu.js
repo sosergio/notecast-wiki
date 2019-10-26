@@ -5,7 +5,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import Icon from '@material-ui/core/Icon';
-import MenuItems from './MenuItems';
+import menuItems from './menuItems';
 import {
   useHistory,
   useLocation
@@ -29,7 +29,7 @@ function AppMenu(props) {
       <Divider />
 
       <List>
-        {MenuItems.map((item, index) => (
+        {menuItems.map((item, index) => (
           <ListItem 
             button 
             key={item.text} 

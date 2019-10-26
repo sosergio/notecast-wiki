@@ -13,12 +13,12 @@ const tutorialSteps = [
   {
     label: 'San Francisco – Oakland Bay Bridge, United States',
     imgPath:
-      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+      '/competitors/apple_home.png',
   },
   {
     label: 'Bird',
     imgPath:
-      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+      '/competitors/apple_playing.png',
   },
   {
     label: 'Bali, Indonesia',
@@ -80,11 +80,6 @@ function WireframesScreen() {
           Wireframes
         </Typography>
         <Divider />
-        <Typography className={classes.mainContentParagraph} paragraph>
-          available doing the same thing with annotated screen captures if possible
-          available doing the same thing with annotated screen captures if possible
-        </Typography>
-        
         <Typography paragraph>{tutorialSteps[activeStep].label}</Typography>
 
         <img

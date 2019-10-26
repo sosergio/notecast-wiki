@@ -5,7 +5,7 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom'
-import menuItems from './menuItems';
+import menuItems from './menuItemsData';
 import {
   useLocation
 } from "react-router-dom";

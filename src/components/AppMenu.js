@@ -5,7 +5,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import Icon from '@material-ui/core/Icon';
-import menuItems from './menuItems';
+import menuItems from './menuItemsData';
 import {
   useHistory,
   useLocation

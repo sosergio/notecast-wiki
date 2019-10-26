@@ -44,14 +44,24 @@ function TechnologiesScreen() {
                 <TableRow key="1">
                   <TableCell>Javascript</TableCell>
                   <TableCell>Programming Language</TableCell>
-                  <TableCell>High Profiency</TableCell>
+                  <TableCell>High Proficiency</TableCell>
+                </TableRow>
+                <TableRow key="2">
+                  <TableCell>NPM</TableCell>
+                  <TableCell>Package Manager</TableCell>
+                  <TableCell>High Proficiency</TableCell>
                 </TableRow>
                 <TableRow key="3">
+                  <TableCell>Material UI</TableCell>
+                  <TableCell>Component Library</TableCell>
+                  <TableCell>New</TableCell>
+                </TableRow>
+                <TableRow key="4">
                   <TableCell>React Native</TableCell>
                   <TableCell>Framework</TableCell>
                   <TableCell>New</TableCell>
                 </TableRow>
-                <TableRow key="4">
+                <TableRow key="5">
                   <TableCell>Expo</TableCell>
                   <TableCell>Mobile SDK</TableCell>
                   <TableCell>New</TableCell>

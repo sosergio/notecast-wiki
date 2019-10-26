@@ -131,7 +131,7 @@ function PersonasScreen() {
           </ExpansionPanelDetails>
         </ExpansionPanel>
         {/* FIRST PERSONA END */}
-
+        <br/>
         {/* SECOND PERSONA BEGIN */}
         <Card className={classes.card}>
           <CardHeader

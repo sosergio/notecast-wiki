@@ -33,6 +33,11 @@ const useStyles = makeStyles(theme => ({
   gridListTile: {
     backgroundColor: theme.palette.grey[200],
   },
+  gridListImg: {
+    transform: 'none', 
+    left:0, 
+    top:0
+  },
   icon: {
     color: 'rgba(255, 255, 255, 0.54)',
   },
@@ -41,7 +46,6 @@ const useStyles = makeStyles(theme => ({
 
 function CompetitorsScreen() {
   const classes = useStyles();
-
   const [selectedItem, setSelectedItem] = React.useState(null);
 
   const onSelected = (index) => {
@@ -61,10 +65,17 @@ function CompetitorsScreen() {
           </Typography>
           <Divider />
           <Typography className={classes.mainContentParagraph} paragraph>
-          available doing the same thing with annotated screen captures if possible
-          available doing the same thing with annotated screen captures if possible
+          Two main competitors app have been analyzed: Apple's own Podcast app, and one that seems to have a large
+          group of users called Overcast.
           </Typography>
-          
+          <Typography paragraph>
+          They both are apps that allow users to subscribe and play podcasts episodes, offering custom playlist and discoverability.
+          It is worth to highligth that no app has been found on the marketplace that allows to keep track of notes while playing
+          a podcast show.
+          </Typography>
+          <Typography paragraph>
+          Select an image below to start reading the detailed review.
+          </Typography>
           <Divider />
           <div className={classes.root}>
             <GridList cellHeight={280} className={classes.gridList}>
@@ -77,7 +88,7 @@ function CompetitorsScreen() {
                 <GridListTile key={tile.img} 
                   onClick={x => onSelected(tile)} 
                   className={classes.gridListTile}> 
-                  <img src={tile.img} alt={tile.title} />
+                  <img src={tile.img} alt={tile.title} className={classes.gridListImg} />
                   <GridListTileBar
                     title={tile.title}
                     actionIcon={
@@ -104,7 +115,7 @@ function CompetitorsScreen() {
                 <GridListTile key={tile.img} 
                   onClick={x => onSelected(tile)} 
                   className={classes.gridListTile}> 
-                  <img src={tile.img} alt={tile.title} />
+                  <img src={tile.img} alt={tile.title} className={classes.gridListImg}/>
                   <GridListTileBar
                     title={tile.title}
                     actionIcon={
@@ -123,11 +134,12 @@ function CompetitorsScreen() {
         <Grid item xs={12} md={4}>
           <Paper elevation={0} className={classes.sidebarAboutBox}>
             <Typography variant="h6" gutterBottom>
-              About
+              About 
             </Typography>
             <Typography>
-              Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit
-              amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+             In this section we are identifying and evaluating the current competition’s strengths and 
+             weaknesses relative to our app, that will help analysing the position of Notecast 
+             in the market and reassesses the viability of the idea. 
             </Typography>
           </Paper>
         </Grid>

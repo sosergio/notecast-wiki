@@ -3,39 +3,15 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 import Paper from '@material-ui/core/Paper';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import MobileStepper from '@material-ui/core/MobileStepper';
-import Button from '@material-ui/core/Button';
-import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
-import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
-
-const tutorialSteps = [
-  {
-    label: 'San Francisco – Oakland Bay Bridge, United States',
-    imgPath:
-      '/competitors/apple_home.png',
-  },
-  {
-    label: 'Bird',
-    imgPath:
-      '/competitors/apple_playing.png',
-  },
-  {
-    label: 'Bali, Indonesia',
-    imgPath:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
-  },
-  {
-    label: 'NeONBRAND Digital Marketing, Las Vegas, United States',
-    imgPath:
-      'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60',
-  },
-  {
-    label: 'Goč, Serbia',
-    imgPath:
-      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
-  },
-];
+import { makeStyles } from '@material-ui/core/styles';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+import GridListTileBar from '@material-ui/core/GridListTileBar';
+import ListSubheader from '@material-ui/core/ListSubheader';
+import IconButton from '@material-ui/core/IconButton';
+import InfoIcon from '@material-ui/icons/Info';
+import ModalSlideshow from './../components/ModalSlideshow';
+import wireframesData from './../components/wireframesData';
 
 const useStyles = makeStyles(theme => ({  
   sidebarAboutBox: {
@@ -46,30 +22,37 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(3),
   },
   root: {
-    flexGrow: 1,
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    backgroundColor: theme.palette.background.paper,
   },
-  img: {
-    overflow: 'hidden',
-    display: 'block',
-    width: '100%',
-    margin: 'auto'
+  gridList: {
+    minWidth: 280
+  },
+  gridListTile: {
+    backgroundColor: theme.palette.grey[200],
+  },
+  gridListImg: {
+    transform: 'none', 
+    left:0, 
+    top:0
+  },
+  icon: {
+    color: 'rgba(255, 255, 255, 0.54)',
   },
 }));
 
 function WireframesScreen() {
-
   const classes = useStyles();
+  const [selectedItem, setSelectedItem] = React.useState(null);
 
-  const theme = useTheme();
-  const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = tutorialSteps.length;
-
-  const handleNext = () => {
-    setActiveStep(prevActiveStep => prevActiveStep + 1);
+  const onSelected = (index) => {
+    setSelectedItem(index)
   };
 
-  const handleBack = () => {
-    setActiveStep(prevActiveStep => prevActiveStep - 1);
+  const handleClose = () => {
+    setSelectedItem(null)
   };
 
   return (
@@ -80,30 +63,40 @@ function WireframesScreen() {
           Wireframes
         </Typography>
         <Divider />
-        <Typography paragraph>{tutorialSteps[activeStep].label}</Typography>
+        <Typography className={classes.mainContentParagraph} paragraph>
+          Two main competitors app have been analyzed: Apple's own Podcast app, and one that seems to have a large
+          group of users called Overcast.
+          </Typography>
+          <Typography paragraph>
+          Select an image below to start reading a detailed description.
+          </Typography>
+        <Divider />
+        <div className={classes.root}>
+          <GridList cellHeight={280} className={classes.gridList}>
+            <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+              <ListSubheader component="div">Overcast App</ListSubheader>
+            </GridListTile>
+            {wireframesData
+              .map(tile => (
+              <GridListTile key={tile.img} 
+                onClick={x => onSelected(tile)} 
+                className={classes.gridListTile}> 
+                <img src={tile.img} alt={tile.title} className={classes.gridListImg}/>
+                <GridListTileBar
+                  title={tile.title}
+                  actionIcon={
+                    <IconButton 
+                      aria-label={`info about ${tile.title}`} className={classes.icon}>
+                      <InfoIcon />
+                    </IconButton>
+                  }
+                />
+              </GridListTile>
+            ))}
+          </GridList>
+        </div>  
 
-        <img
-          className={classes.img}
-          src={tutorialSteps[activeStep].imgPath}
-          alt={tutorialSteps[activeStep].label}
-        />
-        <MobileStepper
-          steps={maxSteps}
-          position="static"
-          variant="text"
-          activeStep={activeStep}
-          nextButton={
-            <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-              Next <KeyboardArrowRight />
-            </Button>
-          }
-          backButton={
-            <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-              <KeyboardArrowLeft />
-              Back
-            </Button>
-          }
-        />
+
       </Grid>
       <Grid item xs={12} md={4}>
         <Paper elevation={0} className={classes.sidebarAboutBox}>
@@ -116,6 +109,12 @@ function WireframesScreen() {
         </Paper>
       </Grid>
     </Grid>
+    <ModalSlideshow 
+        open={selectedItem !== null} 
+        pageTitle="Wireframes"
+        onClose={handleClose}
+        items={wireframesData}
+        selectedItem={selectedItem}></ModalSlideshow>
   </div>
   );
 }

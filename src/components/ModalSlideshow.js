@@ -46,6 +46,9 @@ const useStyles = makeStyles(theme => ({
   heading:{
     padding: theme.spacing(2),
     backgroundColor: theme.palette.grey[200],
+    '&> h6':{
+      textTransform:'capitalize'
+    }
   }
 }));
 
@@ -114,9 +117,11 @@ function ModalSlideshow(props) {
           <Typography variant="h6" gutterBottom>
             {selectedItem ? `${selectedItem.group} - ${selectedItem.title}` : ''} 
           </Typography>
-          <Typography>
-            {selectedItem ? selectedItem.description : ''}
-          </Typography>
+          { selectedItem && selectedItem.description && selectedItem.description.map(line => (
+            <Typography paragraph>
+              <div dangerouslySetInnerHTML={{ __html:line }}></div>
+            </Typography>
+          ))}
         </div>
         <Divider />
         

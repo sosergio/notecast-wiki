@@ -36,7 +36,8 @@ const useStyles = makeStyles(theme => ({
   gridListImg: {
     transform: 'none', 
     left:0, 
-    top:0
+    top:0,
+    maxWidth: '100%'
   },
   icon: {
     color: 'rgba(255, 255, 255, 0.54)',
@@ -78,7 +79,8 @@ function WireframesScreen() {
             </GridListTile>
             {wireframesData
               .map(tile => (
-              <GridListTile key={tile.img} 
+              <GridListTile 
+                key={`${tile.id}-wireframes-list`}
                 onClick={x => onSelected(tile)} 
                 className={classes.gridListTile}> 
                 <img src={tile.img} alt={tile.title} className={classes.gridListImg}/>

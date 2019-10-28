@@ -114,9 +114,10 @@ function ModalSlideshow(props) {
           <Typography variant="h6" gutterBottom>
             {selectedItem ? `${selectedItem.group === pageTitle ? '' : `${selectedItem.group} - `} ${selectedItem.title}` : ''} 
           </Typography>
-          { selectedItem && selectedItem.description && selectedItem.description.map(line => (
-            <Typography paragraph>
-              <div dangerouslySetInnerHTML={{ __html:line }}></div>
+          { selectedItem && selectedItem.description && selectedItem.description.map((line, i) => (
+            <Typography paragraph key={i}>
+              {line}
+              
             </Typography>
           ))}
         </div>

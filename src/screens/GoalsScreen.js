@@ -49,7 +49,7 @@ function GoalsScreen() {
           <Typography paragraph>
             Notecast has been designed following a user centered approach, 
             pain points and user needs have driven the design to produce
-            an app that is easy to use, specially while you are on the go.
+            an app that is easy to use, especially while you are on the go.
           </Typography>
 
           <Typography variant="h6" gutterBottom>Works offline</Typography>
@@ -73,7 +73,7 @@ function GoalsScreen() {
             </Typography>
             <Typography paragraph>
               Podcasting is a free service that allows Internet users to 
-              pull audio files from a broadcasting Web site to 
+              pull audio files from a broadcasting Website to 
               listen to on their computers or personal digital audio players. 
               Even though the term is derived from the Apple's iPod, virtually any media 
               player or computer can be used to listen to a podcast.
@@ -108,3 +108,4 @@ function GoalsScreen() {
 }
 
 export default GoalsScreen;
+

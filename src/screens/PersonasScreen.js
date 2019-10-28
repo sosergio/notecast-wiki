@@ -43,10 +43,11 @@ function PersonasScreen() {
             About
           </Typography>
           <Typography paragraph>
-            Protopersonas representing the users of Notecast.
+            In this page are presented two Proto-Persona used to represent users of Notecast.
           </Typography>
           <Typography paragraph>
-            They are a collection of heuristics, market research, and intuition presenting an opportunity to articulate the target audience, their needs, and behaviors.
+            They are a collection of heuristics, market research, and intuition presenting an opportunity to articulate 
+            the target audience, their needs, and behaviors.
           </Typography>
         </Paper>
       </Grid>

@@ -5,7 +5,7 @@ export default [{
     img: "wf_ia.png",
     description: [
       "The following diagram depicts Notecast's information architecture.",
-      "It is the description of the blocks of contents that the app will feature, arranged in a hierarchical way.",
+      "It is the description of the blocks of content that the app will feature, arranged in a hierarchical way.",
     ]
   },
   {
@@ -41,7 +41,7 @@ export default [{
     title: "Show Details",
     img: "wf_show.png",
     description: [
-      "This is the screen that shows the deatils of a podcast, with the list of its episodes, the actions and the notes."
+      "This is the screen that shows the details of a podcast, with the list of its episodes, the actions and the notes."
     ]
   },
   {
@@ -53,5 +53,4 @@ export default [{
       "This is the modal screen that shows the episodes that is currently in playback, with its audio controls and details."
     ]
   }
-
 ];

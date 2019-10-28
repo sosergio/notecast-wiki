@@ -71,17 +71,16 @@ function TechnologiesScreen() {
           </Paper>
 
           <Typography className={classes.mainContentParagraph}>
-          <b>React Native</b> is a framework that allows us to build native (iOS and Android) apps using the React JavaScript framework. 
-          While React Native also permits development in native languages for Android and iOS, Expo, on the other hand, only permits the use of purely JavaScript and React 
-          for the purpose of development, and provides the Software Development Kit (SDK) and the build environment so that we can only use the provided modules for native development. 
+          React Native is a framework that allows us to build native (iOS and Android) apps using the React JavaScript framework. 
+          Expo is a toolchain built around React Native to help us quickly start an app. It provides a set of tools that simplify 
+          the development and testing of React Native app and provides components of users interface and services that are usually 
+          available in third-party native React Native components.
           </Typography>
-          <Typography className={classes.mainContentParagraph}>
-          Recently, with the release of React Native for Web, React Native has introduced a new addition to its supporting platforms. 
+          <Typography paragraph>
           Expo, in accordance with the current trend, has started supporting the beta version of Expo Web with the release of Expo SDK v33.0.0 in June. 
           Expo Web enables the implementation of a mobile Web and also support Progressive Web Apps (PWA). 
           This means that the components provided by React Native and Expo can not only be built for the native app, 
-          but also can be executed on the web using the same components. 
-          As is true for React, ReactDom is used for rendering on the web.
+          but also can be executed on the web using the same components.
           </Typography>
         </Grid>
         <Grid item xs={12} md={4}>
@@ -90,7 +89,8 @@ function TechnologiesScreen() {
               About
             </Typography>
             <Typography>
-              A list of the technologies/frameworks to be used creating the app and how confident you are with each right now.
+              In this page it is presented the list of the technologies and frameworks that will be used 
+              to create Notecast, including the level of confidence with each at the moment of starting the development.
             </Typography>
           </Paper>
         </Grid>

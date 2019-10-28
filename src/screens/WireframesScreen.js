@@ -65,8 +65,7 @@ function WireframesScreen() {
         </Typography>
         <Divider />
         <Typography className={classes.mainContentParagraph} paragraph>
-          Two main competitors app have been analyzed: Apple's own Podcast app, and one that seems to have a large
-          group of users called Overcast.
+          What follows are the initial wireframes of the final app.
           </Typography>
           <Typography paragraph>
           Select an image below to start reading a detailed description.
@@ -106,7 +105,8 @@ function WireframesScreen() {
             About
           </Typography>
           <Typography>
-          These will be typical screens the user will encounter. These images should be fairly basic given that they will be viewed on a mobile phone.
+            These fairly basic diagrams of the screen of the app are derived from the proto-personas, and are important to 
+            understand the flow of data and the possible user journeys.
           </Typography>
         </Paper>
       </Grid>

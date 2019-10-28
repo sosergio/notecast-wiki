@@ -1,6 +1,7 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
+  // BrowserRouter as Router,
+  MemoryRouter as Router,
   Switch,
   Route
 } from "react-router-dom";

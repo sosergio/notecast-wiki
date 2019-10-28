@@ -2,7 +2,7 @@ export default [{
     id: 1,
     group: "diagram",
     title: "Information Architecture",
-    img: "/wf_ia.png",
+    img: "wf_ia.png",
     description: [
       "The following diagram depicts Notecast's information architecture.",
       "It is the description of the blocks of contents that the app will feature, arranged in a hierarchical way.",
@@ -12,7 +12,7 @@ export default [{
     id: 2,
     group: "Wireframes",
     title: "Downloads",
-    img: "/wf_downloads.png",
+    img: "wf_downloads.png",
     description: [
       "This is the screen that lists all the shows and episodes that the user has available on the device."
     ]
@@ -21,7 +21,7 @@ export default [{
     id: 3,
     group: "Wireframes",
     title: "Notes",
-    img: "/wf_notes.png",
+    img: "wf_notes.png",
     description: [
       "This is the screen that lists all the shows all the notes that the user has taken."
     ]
@@ -30,7 +30,7 @@ export default [{
     id: 4,
     group: "Wireframes",
     title: "Explore",
-    img: "/wf_explore.png",
+    img: "wf_explore.png",
     description: [
       "This is the screen that allows the user to browse all available podcasts on the network, allowing subsequent ordering and filtering."
     ]
@@ -39,7 +39,7 @@ export default [{
     id: 5,
     group: "Wireframes",
     title: "Show Details",
-    img: "/wf_show.png",
+    img: "wf_show.png",
     description: [
       "This is the screen that shows the deatils of a podcast, with the list of its episodes, the actions and the notes."
     ]
@@ -48,7 +48,7 @@ export default [{
     id: 6,
     group: "Wireframes",
     title: "Playing Now",
-    img: "/wf_playing.png",
+    img: "wf_playing.png",
     description: [
       "This is the modal screen that shows the episodes that is currently in playback, with its audio controls and details."
     ]

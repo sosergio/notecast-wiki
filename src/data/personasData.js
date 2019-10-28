@@ -3,7 +3,7 @@ export default [{
   name: "ROBERT",
   age: 43,
   description: "From East Sussex, Lives in London, Marketing manager",
-  avatar: "/robert.png",
+  avatar: "robert.png",
   demographic: [
     "Single",
     "Tech savvy",
@@ -31,7 +31,7 @@ export default [{
   name: "SUSAN",
   age: 22,
   description: "From Suffolk, Accountant, On maternity leave",
-  avatar: "/susan.png",
+  avatar: "susan.png",
   demographic: [
     "Married",
     "College educated",

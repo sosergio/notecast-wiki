@@ -17,10 +17,6 @@ const useStyles = makeStyles(theme => ({
     marginLeft: theme.spacing(2),
     flex: 1,
   },
-  // imgContainer: {
-  //   maxWidth: 400,
-  //   flexGrow: 1,
-  // },
   header: {
     display: 'flex',
     alignItems: 'center',
@@ -116,7 +112,7 @@ function ModalSlideshow(props) {
         <div className={classes.toolbar} />
         <div className={classes.heading}>
           <Typography variant="h6" gutterBottom>
-            {selectedItem ? `${selectedItem.group} - ${selectedItem.title}` : ''} 
+            {selectedItem ? `${selectedItem.group === pageTitle ? '' : `${selectedItem.group} - `} ${selectedItem.title}` : ''} 
           </Typography>
           { selectedItem && selectedItem.description && selectedItem.description.map(line => (
             <Typography paragraph>

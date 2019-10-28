@@ -58,6 +58,13 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     padding: theme.spacing(3),
   },
+  sidebarAboutBox: {
+    padding: theme.spacing(2),
+    backgroundColor: theme.palette.grey[200],
+  },
+  mainContentParagraph: {
+    marginTop: theme.spacing(3),
+  }
 }));
 
 function App(props) {

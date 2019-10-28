@@ -13,17 +13,14 @@ import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
 
 const useStyles = makeStyles(theme => ({  
-  // appBar: {
-  //   position: 'relative',
-  // },
   title: {
     marginLeft: theme.spacing(2),
     flex: 1,
   },
-  root: {
-    maxWidth: 400,
-    flexGrow: 1,
-  },
+  // imgContainer: {
+  //   maxWidth: 400,
+  //   flexGrow: 1,
+  // },
   header: {
     display: 'flex',
     alignItems: 'center',
@@ -32,14 +29,11 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.default,
   },
   img: {
-    
-    maxWidth: '100%',
-    overflow: 'hidden',
-    display: 'block',
-    maxHeigth: '100%',
+    maxWidth: 'calc(100% - 20px)',
+    alignSelf: 'baseline',
     margin: '10px',
-    border: '2px solid black',
     padding: '10px',
+    border: '2px solid black',
     borderRadius: '11px'
   },
   toolbar: theme.mixins.toolbar,
@@ -49,6 +43,13 @@ const useStyles = makeStyles(theme => ({
     '&> h6':{
       textTransform:'capitalize'
     }
+  },
+  footnote: {
+    padding: theme.spacing(2),
+    paddingTop: 0,
+    color: theme.palette.grey[600],
+    fontSize: '9pt',
+    fontVariant: 'normal'
   }
 }));
 
@@ -125,13 +126,14 @@ function ModalSlideshow(props) {
         </div>
         <Divider />
         
-        <div className={classes.root}>
-          <img
-            className={classes.img}
-            src={selectedItem ? selectedItem.img : ''}
-            alt={selectedItem? selectedItem.title : ''} 
-          />
-        </div>
+          <a href={selectedItem ? selectedItem.img : ''} target="_blank" rel="noopener noreferrer">
+            <img
+              className={classes.img}
+              src={selectedItem ? selectedItem.img : ''}
+              alt={selectedItem? selectedItem.title : ''} 
+            />
+          </a>
+          <span className={classes.footnote}>Tap or click on the image to open it in another tab</span>
       </Dialog>
     </div>
   );

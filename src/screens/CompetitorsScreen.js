@@ -11,7 +11,7 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
 import ModalSlideshow from './../components/ModalSlideshow';
-import competitorsData from './../components/competitorsData';
+import competitorsData from '../data/competitorsData';
 
 const useStyles = makeStyles(theme => ({  
   sidebarAboutBox: {
@@ -65,13 +65,12 @@ function CompetitorsScreen() {
           </Typography>
           <Divider />
           <Typography className={classes.mainContentParagraph} paragraph>
-          Two main competitors app have been analyzed: Apple's own Podcast app, and one that seems to have a large
+          Two main competitors app have been analyzed: Apple's own Podcast app, and one with a large
           group of users called Overcast.
           </Typography>
           <Typography paragraph>
-          They both are apps that allow users to subscribe and play podcasts episodes, offering custom playlist and discoverability.
-          It is worth to highligth that no app has been found on the marketplace that allows to keep track of notes while playing
-          a podcast show.
+          They both are apps that allow users to discover, subscribe and play podcasts, including custom playlist and playback controls.
+          It is worth to highligth that no app has been found that allows to attach notes to a podcast or to one of its episodes.
           </Typography>
           <Typography paragraph>
           Select an image below to start reading the detailed review.
@@ -107,10 +106,10 @@ function CompetitorsScreen() {
           <div className={classes.root}>
             <GridList cellHeight={280} className={classes.gridList}>
               <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-                <ListSubheader component="div">Apple Podcast App</ListSubheader>
+                <ListSubheader component="div">Apple Podcasts App</ListSubheader>
               </GridListTile>
               {competitorsData
-                .filter(c => c.group === "apple")
+                .filter(c => c.group === "apple podcasts")
                 .map(tile => (
                 <GridListTile key={tile.img} 
                   onClick={x => onSelected(tile)} 
@@ -138,7 +137,7 @@ function CompetitorsScreen() {
             </Typography>
             <Typography>
              In this section we are identifying and evaluating the current competition’s strengths and 
-             weaknesses relative to our app, that will help analysing the position of Notecast 
+             weaknesses relative to our app; this will help analysing the position of Notecast 
              in the market and reassesses the viability of the idea. 
             </Typography>
           </Paper>

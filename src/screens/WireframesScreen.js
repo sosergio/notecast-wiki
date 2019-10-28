@@ -11,7 +11,7 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
 import ModalSlideshow from './../components/ModalSlideshow';
-import wireframesData from './../components/wireframesData';
+import wireframesData from '../data/wireframesData';
 
 const useStyles = makeStyles(theme => ({  
   sidebarAboutBox: {

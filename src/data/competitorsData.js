@@ -52,7 +52,7 @@ export default [{
   },
   {
     id: 6,
-    group: "apple",
+    group: "apple podcasts",
     title: "Library",
     img: "/apple_home.png",
     description: [
@@ -62,7 +62,7 @@ export default [{
   },
   {
     id: 7,
-    group: "apple",
+    group: "apple podcasts",
     title: "Search",
     img: "/apple_search.png",
     description: [
@@ -72,7 +72,7 @@ export default [{
   },
   {
     id: 8,
-    group: "apple",
+    group: "apple podcasts",
     title: "Detail",
     img: "/apple_detail.png",
     description: [
@@ -83,7 +83,7 @@ export default [{
   },
   {
     id: 9,
-    group: "apple",
+    group: "apple podcasts",
     title: "Playing",
     img: "/apple_playing.png",
     description: [
@@ -92,7 +92,7 @@ export default [{
   },
   {
     id: 10,
-    group: "apple",
+    group: "apple podcasts",
     title: "Downloaded",
     img: "/apple_downloaded.png",
     description: [
